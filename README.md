@@ -12,13 +12,25 @@
 
    > Pentru template-uri.
 
-4. UUID
+4. Mongoose
 
-   > Pentru a genera id-uri unice pentru datele incarcate
+   > Pentru conectarea la baza de date
 
 5. Multer
 
    > Pentru a accesa datele din cererea POST.
+
+6. jsonwebtoken
+
+   > Pentru a putea autentifica utilizatorul fara a-i cere credentialele de fiecare data.
+
+7. Cookie parser
+
+   > Pentru a putea citi valoarea token-ului setat prin jsonwebtoken.
+
+8. donenv
+
+   > Pentru a putea abstractiona credentialele sensibile (aici, doar pentru baza de date)
 
 
 
