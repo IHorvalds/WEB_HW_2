@@ -1,0 +1,116 @@
+@import './palette';
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar-track {
+    background: #d1d1d1;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.header {
+    height: 100pt;
+    margin: 0 auto 0 300pt;
+    max-width: 1000px;
+    border-bottom: 2pt solid #7e7e7e;
+    transition: 0.5s;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    & h2, & h5 {
+        font-size: 1.2em;
+        font-family: 'IBM Plex Serif', serif;
+        padding: 5pt 7pt;
+        border-radius: 4pt;
+        background-color: $color2;
+        color: white;
+        margin-right: auto;
+        transition: 0.5s;
+    }
+
+    & a {
+        margin-right: 0;
+        transition: inherit;
+    }
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 110pt auto 0 300pt;
+    overflow: hidden;
+    overflow-y: scroll;
+    max-width: 1000px;
+    transition: 0.5s;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    padding-right: 30pt;
+}
+
+.edit_button {
+    font-size: 1em;
+    font-family: 'IBM Plex Serif', serif;
+    padding: 5pt 7pt;
+    border-radius: 4pt;
+    background-color: $color4;
+    color: white;
+    margin-bottom: 30pt;
+
+    &:hover {
+        cursor: pointer;
+        background: $color3;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .header {
+        margin-right: 30pt;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    .content {
+        padding-right: 30pt;
+    }
+    .header {
+        margin-right: 30pt;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .header, .content {
+        margin-left: 30pt;
+    }
+
+    .header {
+        & h2, & h5 {
+            margin-left: 30pt;
+        }
+        & select, & label {
+            font-size: 0.7em;
+        }
+    }
+}

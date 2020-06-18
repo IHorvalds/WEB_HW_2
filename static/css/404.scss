@@ -1,0 +1,106 @@
+
+@import './palette';
+.f_o_f {
+    margin: 0;
+    padding: 0 17%;
+    max-height: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    background: url('/static/images/45-degree-fabric-light.png') #00000040;
+    overflow: hidden;
+
+    &_text {
+        z-index: 1;
+    }
+
+    &_title {
+        font-size: 4em;
+        font-family: 'Playfair Display', serif;
+        color: white;
+    }
+
+    &_copy {
+        font-family: 'IBM Plex Serif', sans-serif;
+        font-size: 2em;
+        color: #ececec;
+        
+    }
+
+    a.f_o_f_copy {
+        color: $color5;
+        &:hover {
+            color: $color4;
+        }
+    }
+
+    @keyframes rotation {
+        0%, 100% {
+            transform: rotate(0deg);
+            fill: #2a2b2c;
+        }
+
+        25% {
+            transform: rotate(75deg);
+            fill: #585858;
+        }
+
+        50% {
+            transform: rotate(-20deg);
+            fill: #1e4136;
+        }
+
+        75% {
+            transform: rotate(200deg);
+            fill: #405257;
+        }
+
+        90% {
+            transform: rotate(10deg);
+            fill: #146446;
+        }
+    }
+
+    &_compass {
+        width: 200pt;
+        height: 200pt;
+        object-fit: contain;
+        filter: drop-shadow(0 0 10px #ffffff);
+        animation: rotation 10s ease-in-out infinite;
+        z-index: 1;
+    }
+
+    &_image {
+        width: 500pt;
+        height: 500pt;
+        z-index: 1;
+        position: absolute;
+        bottom: -120px;
+        right: -48px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .f_o_f_image {
+        display: none;
+    }
+}
+@media only screen and (max-height: 600px) {
+    .f_o_f {
+        &_title {
+            font-size: 2em;
+        }
+    
+        &_copy {
+            font-size: 1em;
+            
+        }
+
+        &_compass {
+            width: 150pt;
+            height: 150pt;
+        }
+    }
+}

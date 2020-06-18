@@ -1,0 +1,58 @@
+<div class="photo_header header">
+    <a><h5>Add camera</h5></a>
+</div>
+
+<form id="add_photo_form" class="photo_detail content detail" method="post" enctype="multipart/form-data">
+    <img id="image" src="/static/images/camera.svg" style="background-color: #e6e6e6; object-fit: contain;" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+    <input id="image_upload" type="file" name="photo" accept="image/jpg" onchange="changeImage(this)">
+    <input type="text" name="name" placeholder="Name"/>
+    <textarea name="description" cols="30" rows="5" placeholder="Description"></textarea>
+</form>
+
+<script>
+    var imageUpload = document.querySelector("#image_upload");
+    const addPhotoButton = document.querySelector(".photo_header a");
+
+    document.querySelector("#image").addEventListener('ondragover', event => dragOverHandler(event))
+    document.querySelector("#image").addEventListener('ondrop', event =>  dropHandler(event));
+
+    imageUpload.addEventListener('click', changeImage(imageUpload));
+
+    function dragOverHandler(ev) {
+        ev.preventDefault();
+    }
+
+    function dropHandler(ev) {
+        ev.preventDefault();
+
+        if (ev.dataTransfer.items && ev.dataTransfer.items[0] != null) {
+            if (ev.dataTransfer.items[0].kind === 'file') {
+                imageUpload.files = ev.dataTransfer.files;
+                changeImage(imageUpload);
+            }
+        }
+    }
+
+
+    document.querySelector("#image").addEventListener('click', event => {
+        imageUpload.click();
+    })
+
+    function changeImage(input) {
+        if (input.files && input.files[0] != null) {
+            var reader = new FileReader();
+
+            reader.onload = event => {
+                document.querySelector("#image").setAttribute('src', event.target.result);
+                document.querySelector("#image").removeAttribute('style');
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    addPhotoButton.addEventListener('click', event => {
+        event.preventDefault();
+        document.querySelector(".photo_detail").submit();
+    });
+</script>

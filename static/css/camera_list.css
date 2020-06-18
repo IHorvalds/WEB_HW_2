@@ -1,0 +1,58 @@
+/* Coolors Exported Palette - coolors.co/fffffa-0d5c63-44a1a0-78cdd7-247b7b */
+/* HSL */
+/* RGB */
+.camera_header .filter {
+  -webkit-transform: translateY(-0.7em);
+          transform: translateY(-0.7em);
+}
+
+.camera_header .filter label {
+  font-size: 0.8em;
+  font-family: 'Press Start 2P', monospace;
+}
+
+.camera_header .filter #camera_filter {
+  border: none;
+  border-radius: 2pt;
+  padding: 5pt;
+  color: #5c5c5c;
+  background-color: #e1f0ff;
+  margin-right: 0;
+}
+
+.camera_list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 500px;
+  gap: 40px;
+}
+
+.camera_list .camera {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.camera_list .camera img {
+  height: 80%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.camera_list .camera h4, .camera_list .camera h6 {
+  font-family: 'IBM Plex Serif', serif;
+  margin: 10pt;
+}
+
+.camera_list .camera:hover {
+  background: #dadada80;
+  cursor: pointer;
+}
+/*# sourceMappingURL=camera_list.css.map */

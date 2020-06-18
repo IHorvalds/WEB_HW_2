@@ -1,0 +1,93 @@
+@import './_palette.scss';
+
+.photo_list {
+
+    & .camera {
+        width: 100%;
+        margin-bottom: 20pt;
+        max-width: 800px;
+
+        & h4 {
+            border-radius: 4pt;
+            font-size: 1em;
+            font-family: 'IBM Plex Serif', serif;
+            padding: 3pt 8pt;
+            background: $color2;
+            color: white;
+        }
+
+        & .photos {
+            padding: 0 8pt;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+            grid-auto-flow: row;
+            gap: 30px;
+            & .photo {
+                border-radius: 4pt;
+                display: grid;
+                grid-template-columns: 15pt calc(170px - 15pt);
+                grid-template-rows: 170px 1fr;
+                row-gap: 20px;
+                align-content: center;
+
+                & img {
+                    grid-column: 1/3;
+                    height: 170px;
+                    width: 170px;
+                    object-fit: cover;
+                    border-radius: 4pt;
+                }
+
+                & .icon_photo {
+                    grid-row: 2;
+                    grid-column: 1;
+                    width: 15pt;
+                    height: 15pt;
+                    stroke: red;
+                }
+
+                & h3 {
+                    color: #505050;
+                    grid-row: 2;
+                    grid-column: 2;
+                    font-family: sans-serif;
+                    font-size: 0.9em;
+                    width: calc(170px - 17pt);
+                    margin: 0;
+                    padding: 0 0 0 10px;
+                    align-self: center;
+                }
+
+                &:hover {
+                    background: #dadada80;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    $pictureWidth: 80px;
+    .photo_list {
+
+        & .camera .photos {
+            grid-template-columns: repeat(auto-fill, minmax($pictureWidth, $pictureWidth));
+        }
+
+        & .camera .photos .photo {
+            grid-template-columns: 15pt calc(80px - 15pt);
+            grid-template-rows: $pictureWidth 1fr;
+
+            & img {
+                width: $pictureWidth;
+                height: $pictureWidth;
+            }
+
+            & h3 {
+                width: calc(80px - 15pt);
+                font-size: 0.6em;
+            }
+        }
+    }
+}

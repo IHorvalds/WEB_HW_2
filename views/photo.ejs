@@ -1,0 +1,28 @@
+<div class="photo_header header">
+    <h5><%= data.cameraName %> | <%= data.film %> | ISO <%= data.iso %></h5>
+</div>
+
+<form id="photo_edit_form" method="post" enctype="multipart/form-data" class="photo_detail content detail">
+    <img src="<%= data.file %>">
+    <input type="text" name="title" value="<%= data.title %>"/>
+    <input type="date" name="dateTaken" value="<%= data.dateTaken %>"/>
+    <textarea name="description" cols="30" rows="5"><%= data.description %></textarea>
+</form>
+
+<script>
+    const editPhotoForm = document.querySelector("#photo_edit_form");
+
+    editPhotoForm.addEventListener('change', event => {
+        var editButton = document.createElement('div');
+        editButton.className = 'edit_button';
+        editButton.textContent = "Edit this picture";
+
+        editPhotoForm.appendChild(editButton);
+
+        document.querySelector("textarea[name='description']").style.marginBottom = '10pt';
+
+        editButton.addEventListener('click', event => {
+            editPhotoForm.submit();
+        });
+    });
+</script>

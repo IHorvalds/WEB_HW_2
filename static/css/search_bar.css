@@ -1,0 +1,25 @@
+/* Coolors Exported Palette - coolors.co/fffffa-0d5c63-44a1a0-78cdd7-247b7b */
+/* HSL */
+/* RGB */
+.search_bar .filter {
+  -webkit-transform: translateY(-0.7em);
+          transform: translateY(-0.7em);
+}
+
+.search_bar .filter label {
+  font-size: 0.8em;
+  font-family: 'Press Start 2P', monospace;
+}
+
+.search_bar .filter select {
+  border-radius: 2pt;
+  padding: 5pt;
+  color: #5c5c5c;
+  background-color: #e1f0ff;
+  margin-right: 30pt;
+}
+
+.search_bar .filter select:last-of-type {
+  margin-right: 0;
+}
+/*# sourceMappingURL=search_bar.css.map */

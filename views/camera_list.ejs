@@ -1,0 +1,21 @@
+<div class="camera_header header">
+    <h2>Cameras</h2>
+    <div class="filter">
+        <label for="camera_filter">Search</label><br>
+        <input type="text" id="camera_filter" placeholder="Enter a camera name..."/>
+    </div>
+</div>
+
+<div class="camera_list content">
+    <% data.forEach( (camera) => { %>
+        <div id="<%= camera._id %>" class="camera">
+        
+            <img src="<%= `${camera.file}` %>">
+            <h4><%= camera.name %></h4>
+            <h6>Photos: <%= (camera.photos || []).length %></h6>
+        
+        </div>
+    <% }); %>
+</div>
+
+<script src="/static/js/camera_list.js"></script>

@@ -1,0 +1,135 @@
+@import './_palette.scss';
+
+#open_drawer {
+    position: fixed;
+    top: 0;
+    left: 30pt;
+    margin: 0;
+    height: 100pt;
+    font-size: 30pt;
+    color: black;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    color: $color5;
+
+    &:hover {
+        cursor: pointer;
+        color: #4d4d4d;
+    }
+}
+
+.title {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.4em;
+    color: antiquewhite;
+    height: 100pt;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2pt solid #7e7e7e;
+
+    & a {
+        color: antiquewhite;
+        margin: 0;
+        text-decoration: none;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    & p {
+        font-size: 30pt;
+        color: black;
+        float: right;
+        margin: 0;
+
+        &:hover {
+            cursor: pointer;
+            color: #4d4d4d;
+        }
+    }
+}
+
+.user_name {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.9em;
+    color: wheat;
+}
+
+.log_out {
+    text-decoration: none;
+    font-family: 'Press Start 2P', monospace;
+    color: #bb4545;
+     
+    &:hover {
+        filter: brightness(120%);
+    }
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    max-height: 100vh;
+    width: 200pt;
+    padding: 0 30pt 30pt 30pt;
+    transition: 0.5s;
+    background: $color5 url("/static/images/45-degree-fabric-light.png");
+    z-index: 3;
+
+    & .routes {
+        height: 100%;
+        width: 100%;
+        color: white;
+        margin: 40pt 0;
+
+        & .route {
+            padding: 0 10pt;
+            height: 40pt;
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: $color3;
+            margin-bottom: 10pt;
+            box-shadow: 4px 4px 0 white;
+
+            & p {
+                font-family: 'Press Start 2P', monospace;
+                font-size: 0.9em;
+            }
+
+            &:hover {
+                cursor: pointer;
+                filter: brightness(110%);
+                transform: translateY(-2px);
+                box-shadow: 4px 6px 0 white;
+            }
+
+            & img {
+                height: 30%;
+                filter: invert(1);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #open_drawer {
+        left: 10pt;
+    }
+
+    .sidebar {
+        width: auto;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-height: 500px) {
+    .sidebar {
+        overflow-y: scroll;
+    }
+}

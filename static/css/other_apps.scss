@@ -1,0 +1,100 @@
+@import './_palette.scss';
+
+.app_container {
+
+    & .section_title {
+        font-family: 'Press Start 2P', monospace;
+        font-size: 0.9em;
+        text-decoration: underline;
+    }
+
+    & p {
+        width: 90%;
+    }
+
+    & ol {
+        width: 90%;
+
+        & a {
+            color: #3a3a3a;
+        }
+
+        & .app {
+            font-family: sans-serif;
+
+            & strong {
+                font-size: small;
+            }
+
+            &_property {
+                font-weight: bold;
+                color: #334455;
+            }
+
+            & ul {
+                list-style-type: disc;
+            }
+        }
+    }
+
+    & table {
+        border-collapse: separate;
+        border-spacing: 0;
+        width: 90%;
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+            color: white;
+          }
+
+        & tr:nth-of-type(even) {
+            background-color: #363d5c;
+        }
+
+        & tr:nth-of-type(odd) {
+            background-color: #444974;
+        }
+
+        & tr:first-of-type {
+            background: #334455;
+        }
+
+        & tr td:nth-of-type(1), & th:first-of-type {
+            background: #667788;
+            font-weight: bold;
+        }
+
+        & tr:last-of-type {
+            & td:nth-last-of-type(3), & td:nth-last-of-type(2), & td:nth-last-of-type(1) {
+                text-align: end;
+            }
+        }
+    }
+
+    & hr {
+        width: 90%;
+        margin: 0;
+    }
+}
+
+.footnote_mark {
+    font-size: 10pt;
+}
+
+.footnote {
+    color: #a1a1a1;
+    font-size: 0.7em;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+.podcast {
+    width: 90%;
+}
+
+@media only screen and (max-width: 600px) {
+    .app_container table tr td:nth-of-type(1), th:first-of-type {
+        display: none;
+    }
+}

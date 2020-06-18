@@ -1,0 +1,52 @@
+@import './_palette.scss';
+
+.camera_header {
+
+    & .filter {
+        transform: translateY(-0.7em);
+
+        & label {
+            font-size: 0.8em;
+            font-family: 'Press Start 2P', monospace;
+        }
+
+        & #camera_filter {
+            border: none;
+            border-radius: 2pt;
+            padding: 5pt;
+            color: #5c5c5c;
+            background-color: #e1f0ff;
+            margin-right: 0;
+        }
+    }
+}
+
+.camera_list {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 500px;
+    gap: 40px;
+
+    & .camera {
+        display: flex;
+        flex-direction: column;
+
+        & img {
+            height: 80%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        & h4, h6 {
+            font-family: 'IBM Plex Serif', serif;
+            margin: 10pt;
+        }
+
+
+        &:hover {
+            background: #dadada80;
+            cursor: pointer;
+        }
+    }
+}

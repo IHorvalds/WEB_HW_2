@@ -1,0 +1,145 @@
+{
+    "1": {
+        "name": "Nikon Something",
+        "photos": [
+            {
+                "id": 1,
+                "url": "/data/1/000078.jpg",
+                "title": "Some photo title",
+                "dateTaken": "2019-10-10",
+                "description": "Lorem ipsum fkjvnlkjbnlkjnbjnvikjnsjdnlksjdnfkljdfnlvkjnbuieirngkjfgn iujng irn iojf lskdf sdjkf",
+                "film": "Kodak ColorPlus 200",
+                "iso": 200
+            },
+            {
+                "id": "e46e095a-ddc8-45ec-80ea-31958c762dbb",
+                "title": "Level -2",
+                "url": "/data/1/gage-walker-cl16g4_j_4Q-unsplash.jpg",
+                "dateTaken": "2020-04-07",
+                "iso": "1800",
+                "description": "This is some normal description",
+                "film": "No film",
+                "cameraName": "Nikon Something"
+            }
+        ]
+    },
+    "4": {
+        "name": "Minolta M1",
+        "photos": [
+            {
+                "id": 1,
+                "url": "/data/4/000050.jpg",
+                "title": "Get me some ice",
+                "dateTaken": "2018-04-01",
+                "description": "Lorem ipsum fkjvnlkjbnlkjnbjnvikjnsjdnlksjdnfkljdfnlvkjnbuieirngkjfgn iujng irn iojf lskdf sdjkf",
+                "film": "Cinestill 800",
+                "iso": 800
+            },
+            {
+                "id": 5,
+                "url": "/data/4/000059.jpg",
+                "title": "Nothing",
+                "dateTaken": "2018-01-03",
+                "description": "Lorem ipsum fkjvnlkjbnlkjnbjnvikjnsjdnlksjdnfkljdfnlvkjnbuieirngkjfgn iujng irn iojf lskdf sdjkf",
+                "film": "Cinestill 800",
+                "iso": 800
+            },
+            {
+                "id": "9e3d88ef-fd83-4f18-b024-be35d1cf239a",
+                "title": "Picture of a camera",
+                "url": "/data/4/46.jpg",
+                "dateTaken": "2020-04-10",
+                "iso": "600",
+                "description": "This is fucking description for a fucking picture",
+                "film": "Kodak 400"
+            }
+        ]
+    },
+    "15": {
+        "name": "Nikon Something",
+        "photos": [
+            {
+                "id": 1,
+                "url": "/data/1/000078.jpg",
+                "title": "Some photo title",
+                "dateTaken": "2019-10-10",
+                "description": "Lorem ipsum fkjvnlkjbnlkjnbjnvikjnsjdnlksjdnfkljdfnlvkjnbuieirngkjfgn iujng irn iojf lskdf sdjkf",
+                "film": "Kentmere 400",
+                "iso": 400
+            }
+        ]
+    },
+    "16": {
+        "name": "Nikon Something",
+        "photos": [
+            {
+                "id": 1,
+                "url": "/data/1/000078.jpg",
+                "title": "Some photo title",
+                "dateTaken": "2019-10-10",
+                "description": "Lorem ipsum fkjvnlkjbnlkjnbjnvikjnsjdnlksjdnfkljdfnlvkjnbuieirngkjfgn iujng irn iojf lskdf sdjkf",
+                "film": "Cinestill 800",
+                "iso": 800
+            }
+        ]
+    },
+    "45": {
+        "name": "Minolta M1",
+        "photos": [
+            {
+                "id": 1,
+                "url": "/data/4/000050.jpg",
+                "title": "Get me some ice",
+                "dateTaken": "2018-04-01",
+                "description": "Lorem ipsum fkjvnlkjbnlkjnbjnvikjnsjdnlksjdnfkljdfnlvkjnbuieirngkjfgn iujng irn iojf lskdf sdjkf",
+                "film": "Cinestill 800",
+                "iso": 800
+            },
+            {
+                "id": 5,
+                "url": "/data/4/000059.jpg",
+                "title": "Nothing",
+                "dateTaken": "2018-01-03",
+                "description": "Lorem ipsum fkjvnlkjbnlkjnbjnvikjnsjdnlksjdnfkljdfnlvkjnbuieirngkjfgn iujng irn iojf lskdf sdjkf",
+                "film": "Cinestill 800",
+                "iso": 800
+            }
+        ]
+    },
+    "46": {
+        "name": "Minolta M1",
+        "photos": [
+            {
+                "id": 1,
+                "url": "/data/4/000050.jpg",
+                "title": "Get me some ice",
+                "dateTaken": "2018-04-01",
+                "description": "Lorem ipsum fkjvnlkjbnlkjnbjnvikjnsjdnlksjdnfkljdfnlvkjnbuieirngkjfgn iujng irn iojf lskdf sdjkf",
+                "film": "Cinestill 800",
+                "iso": 800
+            },
+            {
+                "id": 5,
+                "url": "/data/4/000059.jpg",
+                "title": "Nothing",
+                "dateTaken": "2009-01-03",
+                "description": "Lorem ipsum fkjvnlkjbnlkjnbjnvikjnsjdnlksjdnfkljdfnlvkjnbuieirngkjfgn iujng irn iojf lskdf sdjkf",
+                "film": "Kentmere 400",
+                "iso": 400
+            }
+        ]
+    },
+    "b1ffe303-f23c-4d0c-b885-d65dba8d84bf": {
+        "name": "Veano-titanic",
+        "photos": []
+    },
+    "cf814075-f7f1-4ce2-89ff-a6f72a7f5d14": {
+        "name": "Veano-titanic",
+        "photos": []
+    },
+    "8eec577a-c175-4164-9b67-fdf1064e33f6": {
+        "name": "Oana's Nikon Camera",
+        "photos": [],
+        "description": "This is Oana's Nikon Camera. I'm not sure she still has it. Hi there"
+    }
+}

@@ -1,0 +1,31 @@
+<div class="photo_header header">
+    <% if (data.photos && data.photos.length) { %>
+        <a href="/cameras/<%= camid %>/photos"><h5 id="view_photos_button">View Photos</h5></a>
+    <% } else { %>
+        <h5><%= data.name %></h5>
+    <% } %>
+</div>
+
+<form id="edit_camera_form" class="photo_detail content detail" action="#" method="post" enctype="multipart/form-data">
+    <img id="image" src="<%= data.file %>">
+    <input type="text" name="name" placeholder="Name" value="<%= data.name %>"/>
+    <textarea name="description" cols="30" rows="5" placeholder="Description"><%= data.description %></textarea>
+</form>
+
+<script>
+    const editCameraForm = document.querySelector("#edit_camera_form");
+
+    editCameraForm.addEventListener('change', event => {
+        var editButton = document.createElement('div');
+        editButton.className = 'edit_button';
+        editButton.textContent = "Edit <%= data.name %>";
+
+        editCameraForm.appendChild(editButton);
+
+        document.querySelector("textarea[name='description']").style.marginBottom = '10pt';
+
+        editButton.addEventListener('click', event => {
+            editCameraForm.submit();
+        });
+    });
+</script>

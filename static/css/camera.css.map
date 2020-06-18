@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,8EAA8E;AAE9E,SAAS;AAOT,SAAS;ADPT,AAAA,mBAAmB,CAAC;EAChB,UAAU,EAAE,OAAO;CAKtB;;AAND,AAGI,mBAHe,AAGd,MAAM,CAAC;EACJ,MAAM,EAAE,gBAAgB;CAC3B",
+    "sources": [
+        "camera.scss",
+        "_palette.scss"
+    ],
+    "names": [],
+    "file": "camera.css"
+}

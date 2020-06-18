@@ -1,0 +1,24 @@
+<div class="search_bar header">
+
+    <h2>Photos</h2>
+
+    <% if (data.length > 1) { %>
+        <div class="filter">
+            <label for="camera_option">Camera</label><br>
+            <select id="camera_option">
+                <option value="">All cameras</option>
+                <% Object.entries(data).forEach( ([camid, camera] ) => { %>
+                    <option value="<%= camid%>"><%= camera.name %></option>
+                <% }) %>
+            </select>
+        </div>
+
+        <!-- <div class="filter">
+            <label for="dates_option">Date span</label><br>
+            <select id="dates_option">
+                <option>Minolta M1</option>
+                <option>Nikon Something</option>
+            </select>
+        </div> -->
+    <% } %>
+</div>

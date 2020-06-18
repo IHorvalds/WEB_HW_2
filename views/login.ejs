@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/images/icons8-camera-100.png">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;family=Press+Start+2P&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&amp;family=Playfair+Display&amp;display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <link rel="stylesheet" href="/static/css/login.css">
+    <title>Film App Login</title>
+</head>
+
+<body>
+    <div class="login_background">
+        <form class="login_card" method="post" enctype="multipart/form-data">
+            <h3 class="title"><%= title %> <span id="register_or_login">Login</span></h3>
+            <hr style="height: 1px; width: 100%; border: none; background-color: black;"/>
+            <label for="name">Name</label>
+            <input type="text" name="name">
+            <label for="email">Email</label>
+            <input type="email" name="email">
+            <label for="password">Password</label>
+            <input type="password" name="password">
+            <label for="gender">Gender</label>
+            <select name="gender">
+                <option value="m">Male</option>
+                <option value="f">Female</option>
+                <option value="o">Other</option>
+            </select>
+            <div class="privacy_policy">
+                <label for="privacy_check">I agree to the privacy policy</label>
+                <input type="checkbox" id="privacy_check" name="privacy_check">
+            </div>
+            <div id="switch_button">Need an account?</div>
+            <button id="send">Login</button>
+        </form>
+    </div>
+
+    <script src="/static/js/login.js"></script>
+</body>
+
+</html>

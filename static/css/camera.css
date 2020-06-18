@@ -1,0 +1,12 @@
+/* Coolors Exported Palette - coolors.co/fffffa-0d5c63-44a1a0-78cdd7-247b7b */
+/* HSL */
+/* RGB */
+#view_photos_button {
+  background: #41181f;
+}
+
+#view_photos_button:hover {
+  -webkit-filter: brightness(150%);
+          filter: brightness(150%);
+}
+/*# sourceMappingURL=camera.css.map */

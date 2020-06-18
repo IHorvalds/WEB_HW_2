@@ -1,0 +1,98 @@
+/* Coolors Exported Palette - coolors.co/fffffa-0d5c63-44a1a0-78cdd7-247b7b */
+/* HSL */
+/* RGB */
+.app_container .section_title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.9em;
+  text-decoration: underline;
+}
+
+.app_container p {
+  width: 90%;
+}
+
+.app_container ol {
+  width: 90%;
+}
+
+.app_container ol a {
+  color: #3a3a3a;
+}
+
+.app_container ol .app {
+  font-family: sans-serif;
+}
+
+.app_container ol .app strong {
+  font-size: small;
+}
+
+.app_container ol .app_property {
+  font-weight: bold;
+  color: #334455;
+}
+
+.app_container ol .app ul {
+  list-style-type: disc;
+}
+
+.app_container table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 90%;
+}
+
+.app_container table td, .app_container table th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  color: white;
+}
+
+.app_container table tr:nth-of-type(even) {
+  background-color: #363d5c;
+}
+
+.app_container table tr:nth-of-type(odd) {
+  background-color: #444974;
+}
+
+.app_container table tr:first-of-type {
+  background: #334455;
+}
+
+.app_container table tr td:nth-of-type(1), .app_container table th:first-of-type {
+  background: #667788;
+  font-weight: bold;
+}
+
+.app_container table tr:last-of-type td:nth-last-of-type(3), .app_container table tr:last-of-type td:nth-last-of-type(2), .app_container table tr:last-of-type td:nth-last-of-type(1) {
+  text-align: end;
+}
+
+.app_container hr {
+  width: 90%;
+  margin: 0;
+}
+
+.footnote_mark {
+  font-size: 10pt;
+}
+
+.footnote {
+  color: #a1a1a1;
+  font-size: 0.7em;
+  font-weight: 500;
+  font-family: sans-serif;
+}
+
+.podcast {
+  width: 90%;
+}
+
+@media only screen and (max-width: 600px) {
+  .app_container table tr td:nth-of-type(1), th:first-of-type {
+    display: none;
+  }
+}
+/*# sourceMappingURL=other_apps.css.map */

@@ -1,0 +1,25 @@
+@import './_palette.scss';
+
+.search_bar {
+
+    & .filter {
+        transform: translateY(-0.7em);
+
+        & label {
+            font-size: 0.8em;
+            font-family: 'Press Start 2P', monospace;
+        }
+
+        & select {
+            border-radius: 2pt;
+            padding: 5pt;
+            color: #5c5c5c;
+            background-color: #e1f0ff;
+            margin-right: 30pt;
+    
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+}

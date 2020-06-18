@@ -1,0 +1,28 @@
+<%- include('search_bar', data); -%> 
+
+<div class="photo_list content">
+    <% data.forEach( (camera) => { %>
+        
+        <% if (camera.photos || camera.photos.length) { %>
+
+            <div data-id="<%= camera._id %>" class="camera">
+            
+                <h4><%= camera.name %></h4>
+
+                <div class="photos">
+                    <% camera.photos.forEach( photo => { %>
+                        <div data-id="<%= photo._id %>" class="photo">
+                            <img src="<%= photo.file %>">
+                            <img class="icon_photo" src="/static/images/image.svg">
+                            <h3><%= photo.title %></h3>
+                        </div>
+                    <% }); %>
+                </div>
+            
+            </div>
+
+        <% } %>
+    <% }); %>
+</div>
+
+<script src="/static/js/photo_list.js"></script>

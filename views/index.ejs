@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;family=Press+Start+2P&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&amp;family=Playfair+Display&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/sidebar.css">
+    <link rel="stylesheet" href="/static/css/photo_list.css">
+    <link rel="stylesheet" href="/static/css/search_bar.css">
+    <link rel="stylesheet" href="/static/css/photo_detail.css">
+    <link rel="stylesheet" href="/static/css/camera_list.css">
+    <link rel="stylesheet" href="/static/css/camera.css">
+    <link rel="stylesheet" href="/static/css/other_apps.css">
+    <link rel="stylesheet" href="/static/css/login.css">
+    <link rel="icon" href="/static/images/icons8-camera-100.png">
+    <title><%= title %></title>
+</head>
+<body>
+
+    <% if (page == 'photo_list' || page == '') { %>
+        <%- include('photo_list', data); %>
+    <% } %>
+
+    <% if (page == 'camera_list') { %>
+        <%- include('camera_list', data); %>
+    <% } %>
+
+    <% if (page == 'photo_detail') { %>
+        <%- include('photo', data); %>
+    <% } %>
+
+    <% if (page == 'photo_add') { %>
+        <%- include('photo_add', data); %>
+    <% } %>
+        
+    <% if (page == 'camera_detail') { %>
+        <%- include('camera', data, camid); %>
+    <% } %>
+
+    <% if (page == 'camera_add') { %>
+        <%- include('camera_add', data); %>
+    <% } %>
+
+    <% if (page == 'messages') { %>
+        <%- include('messages'); %>
+    <% } %>
+
+    <%- include('sidebar', title); %>
+</body>
+</html>

@@ -1,0 +1,9 @@
+@import './_palette.scss';
+
+#view_photos_button {
+    background: #41181f;
+
+    &:hover {
+        filter: brightness(150%);
+    }
+}

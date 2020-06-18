@@ -1,0 +1,75 @@
+/* Coolors Exported Palette - coolors.co/fffffa-0d5c63-44a1a0-78cdd7-247b7b */
+/* HSL */
+/* RGB */
+.photo_header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.photo_detail img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 30pt;
+}
+
+.photo_detail input {
+  border: none;
+  border-bottom: 1px solid #647180;
+}
+
+.photo_detail input[type=text] {
+  color: #505050;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-bottom: 20pt;
+  height: 1.8em;
+  width: 70%;
+}
+
+.photo_detail input[type=number] {
+  color: #505050;
+  font-family: 'IBM Plex Serif', serif;
+  font-size: 1.4em;
+  font-weight: 700;
+  margin-bottom: 20pt;
+  height: 1.4em;
+  width: 100pt;
+}
+
+.photo_detail input[type=date] {
+  color: #646464;
+  font-family: 'IBM Plex Serif', serif;
+  font-size: 1.4em;
+  font-weight: 400;
+  width: 150pt;
+  overflow: visible;
+  margin-bottom: 20pt;
+}
+
+.photo_detail input[type=date]::-webkit-clear-button {
+  display: none;
+}
+
+.photo_detail textarea {
+  color: #646464;
+  font-size: 1em;
+  margin-bottom: 50pt;
+  min-height: 100px;
+  overflow-y: scroll;
+}
+
+.photo_detail select {
+  border-radius: 2pt;
+  padding: 5pt;
+  color: #5c5c5c;
+  background-color: #e1f0ff;
+  width: 100pt;
+  margin-bottom: 30pt;
+}
+
+#image_upload {
+  display: none;
+}
+/*# sourceMappingURL=photo_detail.css.map */
