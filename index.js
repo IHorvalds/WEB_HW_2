@@ -3,7 +3,7 @@ const path = require('path');
 // const fs = require('fs');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 const app = express();
 const cookieParser = require('cookie-parser');
 
@@ -51,11 +51,19 @@ app.use('/cameras', camerasRoutes);
 const userRoutes = require('./routes/users');
 app.use('/user', userRoutes);
 
+//messages
+const messageRoutes = require('./routes/messages');
+app.use('/messages', messageRoutes);
 
-app.route('/messages').get( (request, response) => {
-    const page = 'messages';
-    response.render('index', {title, page});
-});
+
+app.get('/', (_, res) => {
+    res.redirect('/photos');
+})
+
+// app.route('/messages').get( (request, response) => {
+//     const page = 'messages';
+//     response.render('index', {title, page});
+// });
 
 app.use(function(request, response) {
     response.status(404);

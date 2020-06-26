@@ -29,6 +29,14 @@ router.route('/register')
             return res.json({"error": "Email already in use"});
         }
     } finally {}
+
+    // is username in use?
+    try {
+        const user = await User.findOne({"username": req.body.username}).exec();
+        if (user) {
+            return res.json({"error": "Username already in use"});
+        }
+    } finally {}
     
 
     // hash password
@@ -37,14 +45,15 @@ router.route('/register')
     
     const user = new User({
         name: req.body.name,
+        username: req.body.username,
         email: req.body.email,
         password: hashed
     });
     user.save()
     .then((savedUser) => {
-        const token = jwt.sign({_id: savedUser._id}, process.env.TOKEN_SECRET);
+        const token = jwt.sign({_id: savedUser._id, username: savedUser.username}, process.env.TOKEN_SECRET);
         res.cookie('auth-token', token);
-        return res.json(token);
+        return res.json({"name": savedUser.name});
     })
     .catch((error) => {
         console.log(error);
@@ -84,7 +93,7 @@ router.route('/login')
             } else {
                 const validCreds = await checkCredentials(req.body);
                 if (validCreds) {
-                    const new_token = jwt.sign({_id: validCreds._id, name: validCreds.name}, process.env.TOKEN_SECRET);
+                    const new_token = jwt.sign({_id: validCreds._id, name: validCreds.name, username: validCreds.username}, process.env.TOKEN_SECRET);
                     res.cookie('auth-token', new_token);
                     res.json({"name": validCreds.name});
                 } else {
@@ -94,7 +103,7 @@ router.route('/login')
         } catch {
             const validCreds = await checkCredentials(req.body);
             if (validCreds) {
-                const new_token = jwt.sign({_id: validCreds._id, name: validCreds.name}, process.env.TOKEN_SECRET);
+                const new_token = jwt.sign({_id: validCreds._id, name: validCreds.name, username: validCreds.username}, process.env.TOKEN_SECRET);
                 res.cookie('auth-token', new_token);
                 res.json({name: validCreds.name});
             } else {
@@ -104,7 +113,7 @@ router.route('/login')
     } else {
         const validCreds = await checkCredentials(req.body);
         if (validCreds) {
-            const new_token = jwt.sign({_id: validCreds._id, name: validCreds.name}, process.env.TOKEN_SECRET);
+            const new_token = jwt.sign({_id: validCreds._id, name: validCreds.name, username: validCreds.username}, process.env.TOKEN_SECRET);
             res.cookie('auth-token', new_token);
             res.json({name: validCreds.name});
         } else {

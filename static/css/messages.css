@@ -1,0 +1,194 @@
+/* Coolors Exported Palette - coolors.co/fffffa-0d5c63-44a1a0-78cdd7-247b7b */
+/* HSL */
+/* RGB */
+.new_mesg {
+  height: 190pt;
+  display: -ms-grid;
+  display: grid;
+  margin: 10pt 40pt 0 10pt;
+  -ms-grid-rows: 2em 2em 1fr;
+      grid-template-rows: 2em 2em 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 10px;
+  background: #fafafa;
+  -webkit-box-shadow: 1px 1px 4px #5EA9DD;
+          box-shadow: 1px 1px 4px #5EA9DD;
+  border-radius: 3pt;
+  padding: 10pt;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+  font-weight: 600;
+}
+
+.new_mesg #call_to_action {
+  color: #5EA9DD;
+  font-size: 1.5em;
+}
+
+.new_mesg #msg_title {
+  color: #302f2f;
+  border: none;
+  border-bottom: 1px solid #5EA9DD;
+  border-radius: 3pt;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.new_mesg #msg_title:focus {
+  outline: none !important;
+  border: 2pt solid #5EA9DD;
+}
+
+.new_mesg #msg_content {
+  resize: none;
+  border: none;
+  border-radius: 3pt;
+  border-bottom: 1pt solid #5EA9DD;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.new_mesg #msg_content:focus {
+  outline: none !important;
+  border: 2pt solid #5EA9DD;
+}
+
+.new_mesg #publish_button {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  font-size: 1.2em;
+  padding: 0.1em 10pt 0.1em 10pt;
+  border: none;
+  background: #d5ebff;
+  color: #5EA9DD;
+  border-radius: 2pt;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.new_mesg #publish_button:hover {
+  cursor: pointer;
+  -webkit-filter: brightness(102%);
+          filter: brightness(102%);
+}
+
+.new_mesg #publish_button:focus {
+  outline: none !important;
+}
+
+.moods {
+  height: 30pt;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  gap: 10px;
+}
+
+.moods div {
+  background: #bdddfa;
+  color: #5EA9DD;
+  border-radius: 2pt;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.moods div:hover {
+  cursor: pointer;
+  -webkit-filter: brightness(105%);
+          filter: brightness(105%);
+}
+
+.moods div:nth-of-type(2) {
+  color: #6d2626;
+  background-color: #e4a1a1;
+}
+
+.moods div:nth-of-type(3) {
+  color: #fc8a08;
+  background-color: #ffe1aa;
+}
+
+.moods div:nth-of-type(4) {
+  color: #66063b;
+  background-color: #e4a1ca;
+}
+
+.moods div input, .moods div label {
+  pointer-events: none;
+}
+
+#timeline {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+  color: #5EA9DD;
+  font-size: 2em;
+  margin: 0 40pt 10px 10pt;
+  border-bottom: 10px solid #badaff;
+}
+
+.message {
+  border-bottom: 1px solid #b4b4b4;
+  margin: 0 40pt 10px 10pt;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 30pt;
+      grid-template-columns: 1fr 30pt;
+  -ms-grid-rows: 1.3em;
+      grid-template-rows: 1.3em;
+  gap: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+}
+
+.message .delete_message {
+  color: #5EA9DD;
+  text-align: center;
+  background-color: #c3d1ff;
+  border-radius: 3pt;
+}
+
+.message .delete_message:hover {
+  cursor: pointer;
+}
+
+.message .message_owner {
+  color: #5EA9DD;
+  font-size: 1em;
+  margin: 0;
+}
+
+.message .message_owner .date {
+  color: #cecece;
+}
+
+.message .message_owner .user_handle {
+  font-weight: 400;
+}
+
+.message .message_owner .user_handle a {
+  text-decoration: none;
+  color: #7493b1;
+}
+
+.message .message_owner .user_handle a:hover {
+  text-decoration: underline;
+}
+
+.message .message_title {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+}
+
+.message .message_content {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+}
+/*# sourceMappingURL=messages.css.map */

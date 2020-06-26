@@ -1,0 +1,82 @@
+<div class="header">
+    <h2>Tweestagram</h2>
+</div>
+
+<div class="mesg_list content">
+    <% if (data.user && (data.user.username == data.username_from_url || !data.username_from_url)) { %>
+        <form class="new_mesg" action="" enctype="multipart/form-data">
+            <div id="call_to_action">Got a message? Tweet it!</div>
+            <input id="msg_title" type="text" name="title" placeholder="Whatcha doin'?">
+            <textarea id="msg_content" name="content" placeholder="Only 255 characters though!"></textarea>
+            <div class="moods">
+                <div id="mood0">
+                    <input type="radio" name="mood" id="awesome" value="0">
+                    <label for="awesome">😎 Awesome!</label>
+                </div>
+                <div id="mood1">
+                    <input type="radio" name="mood" id="angry" value="1">
+                    <label for="awesome">😡 Angry</label>
+                </div>
+                <div id="mood2">
+                    <input type="radio" name="mood" id="anxious" value="2">
+                    <label for="awesome">😰 Anxious</label>
+                </div>    
+                <div id="mood3">
+                    <input type="radio" name="mood" id="relaxed" value="3">
+                    <label for="awesome">😌 Relaxed</label>
+                </div>
+            </div>
+            <button id="publish_button">Publish</button>
+        </form>
+    <% } %> 
+
+    <br>
+    <h2 id="timeline">Timeline</h2>
+
+    <%
+    function formatDate(date) {
+        var m = [
+            "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+        ];
+        var day = date.getDate();
+        var month = m[date.getMonth()];
+        var year = date.getFullYear();
+        return `${day} ${month} ${year}`;
+    }
+
+    function getState(state) {
+        switch (state) {
+            case 0:
+                return 'awesome! 😎';
+                break;
+            case 1:
+                return 'angry 😡';
+                break;
+            case 2:
+                return 'anxious 😰';
+                break;
+            case 3:
+                return 'relaxed 😌';
+                break;
+        }
+    }
+    %>
+
+    <% data.messages.forEach( (mesg) => { %>
+        <div id="<%= mesg._id %>" class="message">
+            <h4 class="message_owner">
+                <%= mesg.owner.name %> 
+                <span class="user_handle"><a href="/messages/<%= mesg.owner.username %>">@<%= mesg.owner.username %></a></span> · 
+                <span class="date"><%= formatDate(mesg.add_date) %></span> · 
+                <span class="tweet_mood">Feeling <%= getState(mesg.state) %></span>
+            </h4>
+            <% if (data.user && mesg.owner._id == data.user._id) { %>
+                <div data-id="<%= mesg._id %>" class="delete_message">&#10006;</div>
+            <% } %>
+            <h3 class="message_title"><%= mesg.title %></h3>
+            <p class="message_content"><%= mesg.content %></p>
+        </div>
+    <% }); %>
+</div>
+
+<script src="/static/js/message_list.js"></script>

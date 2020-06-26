@@ -7,8 +7,10 @@
     const passInput = document.querySelector("[name='password']");
     const nameInput = document.querySelector("[name='name']");
     const genderInput = document.querySelector("[name='gender']");
+    const usernameInput = document.querySelector("[name='username']");
     const nameLabel = document.querySelector("[for='name']");
     const genderLabel = document.querySelector("[for='gender']");
+    const usernameLabel = document.querySelector("[for='username']");
     const privacyInput = document.querySelector(".privacy_policy");
     const send_button = document.getElementById("send");
     const form = document.querySelector(".login_card");
@@ -23,7 +25,19 @@
     const jwt_token = getCookie('auth-token');
 
     if (jwt_token) {
-        window.location = "/photos";
+        // window.location = "/photos";
+        fetch('/auth/login', { 
+            method: "POST"
+        })
+        .then((response) => {
+            if (response.ok) {
+                response.json()
+                .then( data => {
+                    localStorage.setItem('name', data.name);
+                    window.location = "/photos";
+                }).finally();
+            }
+        }).finally();
     }
 
     var is_login = true;
@@ -34,6 +48,8 @@
     genderInput.style.display = (is_login) ? "none" : "";
     genderLabel.style.display = (is_login) ? "none" : "";
     privacyInput.style.display = (is_login) ? "none" : "";
+    usernameInput.style.display = (is_login) ? "none" : "";
+    usernameLabel.style.display = (is_login) ? "none" : "";
     send_button.innerText =  (is_login) ? "Login" : "Register";
 
     register_or_login_switch.addEventListener('click', e => {
@@ -45,6 +61,8 @@
         genderInput.style.display = (is_login) ? "none" : "";
         genderLabel.style.display = (is_login) ? "none" : "";
         privacyInput.style.display = (is_login) ? "none" : "";
+        usernameInput.style.display = (is_login) ? "none" : "";
+        usernameLabel.style.display = (is_login) ? "none" : "";
         send_button.innerText =  (is_login) ? "Login" : "Register";
     })
 
@@ -70,30 +88,27 @@
 
             formData.delete('gender');
             formData.delete('name');
+            formData.delete('username');
 
-            if (jwt_token) { // already logged in
-                window.location = "/photos";
-            } else {
-                fetch('/auth/login', { 
-                    method: "POST",
-                    body: formData
-                })
-                .then((response) => {
-                    if (response.ok) {
-                        response.json()
-                        .then( data => {
-                            localStorage.setItem('name', data.name);
-                            Swal.fire(`Hello, ${data.name}}!`, `Welcome back!.`, 'success');
-                            setTimeout( () => {
-                                window.location = "/photos";
-                            }, 1500);
-                        }).finally();
-                    } else {
-                        
-                        console.log("Error", response.status);
-                    }
-                });
-            }
+            fetch('/auth/login', { 
+                method: "POST",
+                body: formData
+            })
+            .then((response) => {
+                if (response.ok) {
+                    response.json()
+                    .then( data => {
+                        localStorage.setItem('name', data.name);
+                        Swal.fire(`Hello, ${data.name}!`, `Welcome back!.`, 'success');
+                        setTimeout( () => {
+                            window.location = "/photos";
+                        }, 1500);
+                    }).finally();
+                } else {
+                    
+                    console.log("Error", response.status);
+                }
+            });
             
         } else {
             if (formData.get('privacy_check')) {
@@ -106,7 +121,7 @@
                         response.json()
                         .then(data => {
                             console.log('logged in ', data);
-                            Swal.fire(`Hello, ${data.name}}!`, `Welcome to the family!.`, 'success');
+                            Swal.fire(`Hello, ${data.name}!`, `Welcome to the family!.`, 'success');
                             setTimeout( () => {
                                 window.location = "/photos";
                             }, 1500);
