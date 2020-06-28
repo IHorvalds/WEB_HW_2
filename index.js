@@ -48,8 +48,8 @@ const camerasRoutes = require('./routes/cameras');
 app.use('/cameras', camerasRoutes);
 
 //users
-const userRoutes = require('./routes/users');
-app.use('/user', userRoutes);
+// const userRoutes = require('./routes/users');
+// app.use('/user', userRoutes);
 
 //messages
 const messageRoutes = require('./routes/messages');

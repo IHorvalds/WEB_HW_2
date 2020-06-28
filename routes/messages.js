@@ -47,7 +47,7 @@ router.route('/:username').get(verifyToken, async (req, res) => {
     data.user = req.user;
     const user = await User.findOne({username: req.params.username}).exec();
     if (user) {
-        Message.find({owner: user}).populate('owner').exec()
+        Message.find({owner: user}).sort([['add_date', -1]]).populate('owner').exec()
         .then( messages => {
             data.username_from_url = req.params.username;
             data.messages = messages;
